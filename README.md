@@ -1,12 +1,40 @@
-# React + Vite
+# Soulify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Link to live preview: [Soulify Live](https://soulify-rouge.vercel.app)
 
-Currently, two official plugins are available:
+## Tech Stack
+- React
+- Tailwind CSS
+- Vite
+- Lucide-React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Components Implemented
+- Top Menu Bar
+- Hero Section
+- Features Section
+  - Manifestation-Tool Section
+  - Services Section
+- Therapy Section
+- Resources Section
+- Footer
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I Would Improve with More Time
+* manifestation board(core --> an affirmation that is to be done twice daily at a certain point of time daily 
+     [functionality : alarm ,pop-up])images, notes
+*daily affirmations
+*daily horoscope
+*tarot readings through AI also personal readings(platform to paid readers after an initial breakpoint)
+*healing (progress tracker {small goals})
+*achieved or not  (every 40 days)
+*chakras alignment
+through AI symptoms and solutions-->maintenance once recovered 
+again tracker for solution or paid opt for paid reader for chakra cleansing
+*after a manifestation achieved --> time for next
+*soak in positivity page(daily videos etc etc[AI])
+*a special mode for meditation with different sounds 
+    -water -birds -air -natural sound and visuals personalized according to user
+*feeling low pop-up (after taking some permissions and ai integration[like of Instagram])
+    -providing light weight content  OR
+    -things you should do now(a. generalized b. personalized acc to current info AI)
+*AVATAR -a bestie/brocode type avatar a special tab for this where you can spit out any dam thing.
+ 
