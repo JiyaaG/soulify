@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TopMenuBar from './components/TopMenu';
 import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -14,6 +15,7 @@ function App() {
       <TopMenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="flex-grow">
         <HeroSection darkMode={darkMode} />
+        <FeaturesSection darkMode={darkMode} />
         </main>
 </div>
       
