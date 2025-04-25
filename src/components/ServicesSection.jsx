@@ -69,7 +69,7 @@ function ServicesSection({ darkMode }) {
 
   return (
     <section
-      id="features"
+      id="services"
       className={`py-20 transition-colors duration-500 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
     >
       <div className="max-w-7xl mx-auto px-6">
