@@ -3,6 +3,7 @@ import TopMenuBar from './components/TopMenu';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import TherapySection from './components/TherapySection';
+import ResourcesSection from './components/ResourcesSection';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   
@@ -17,6 +18,7 @@ function App() {
         <HeroSection darkMode={darkMode} />
         <FeaturesSection darkMode={darkMode} />
         <TherapySection darkMode={darkMode} />
+        <ResourcesSection darkMode={darkMode} />
         
         </main>
 </div>
