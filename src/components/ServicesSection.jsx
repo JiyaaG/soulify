@@ -5,7 +5,7 @@ import { Users, Calendar } from 'lucide-react';
 import {motion} from 'framer-motion';
 
 
-function FeaturesSection({ darkMode }) {
+function ServicesSection({ darkMode }) {
   const features = [
     {
       icon: <Users size={32} />,
@@ -102,4 +102,4 @@ function FeaturesSection({ darkMode }) {
   );
 }
 
-export default FeaturesSection;
+export default ServicesSection;
