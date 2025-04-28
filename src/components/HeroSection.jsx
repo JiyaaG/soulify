@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useSelector } from 'react-redux';
 
-function HeroSection({ darkMode }) {
+function HeroSection() {
+  const darkMode = useSelector(state => state.ui.darkMode);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -53,6 +55,7 @@ function HeroSection({ darkMode }) {
               Professional therapy services tailored to your needs. We're here to support you through life's challenges with compassion and understanding.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              
               <a
                 href="#"
                 className={`px-6 py-3 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300 ${
@@ -82,13 +85,13 @@ function HeroSection({ darkMode }) {
             isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
           }`}
         >
-        <div className="w-full max-w-2xl transform hover:scale-105 transition duration-500 ease-in-out">
-  <DotLottieReact
-    src="https://lottie.host/85ffccd6-8758-4f7e-83f2-9bccea68b31f/cP8Md5fq13.lottie"
-    loop
-    autoplay
-  />
-</div>
+          <div className="w-full max-w-2xl transform hover:scale-105 transition duration-500 ease-in-out">
+            <DotLottieReact
+              src="https://lottie.host/85ffccd6-8758-4f7e-83f2-9bccea68b31f/cP8Md5fq13.lottie"
+              loop
+              autoplay
+            />
+          </div>
         </div>
       </div>
     </section>

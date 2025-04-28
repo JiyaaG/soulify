@@ -1,7 +1,13 @@
+// src/components/TopMenuBar.js
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Sun, Moon, Menu, X, Heart } from 'lucide-react';
+import { toggleDarkMode } from '../redux/uiSlice';
 
-function TopMenuBar({ darkMode, toggleDarkMode }) {
+function TopMenuBar() {
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state) => state.ui.darkMode); 
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -69,7 +75,7 @@ function TopMenuBar({ darkMode, toggleDarkMode }) {
           </nav>
 
           {/* Dark Mode Toggle */}
-          <button onClick={toggleDarkMode} className="focus:outline-none pl-5" aria-label="Toggle dark mode">
+          <button onClick={() => dispatch(toggleDarkMode())} className="focus:outline-none pl-5" aria-label="Toggle dark mode">
             {darkMode ? <Sun color="white" /> : <Moon color="black" />}
           </button>
 
@@ -82,33 +88,32 @@ function TopMenuBar({ darkMode, toggleDarkMode }) {
 
       {/* Mobile Menu */}
       {menuOpen && (
-  <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
-    <div className="px-6 py-4 flex flex-col space-y-4">
-      {['home', 'features', 'therapy', 'resources'].map((item) => (
-        <a
-          key={item}
-          href={`#${item}`}
-          onClick={() => {
-            setActiveSection(item); 
-            setTimeout(() => setMenuOpen(false), 150); 
-          }}
-          className={`py-2 font-medium hover:underline ${
-            activeSection === item
-              ? darkMode
-                ? 'text-teal-400'
-                : 'text-teal-600'
-              : darkMode
-              ? 'text-white'
-              : 'text-black'
-          }`}
-        >
-          {item.charAt(0).toUpperCase() + item.slice(1)}
-        </a>
-      ))}
-    </div>
-  </div>
-)}
-
+        <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
+          <div className="px-6 py-4 flex flex-col space-y-4">
+            {['home', 'features', 'therapy', 'resources'].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                onClick={() => {
+                  setActiveSection(item); 
+                  setTimeout(() => setMenuOpen(false), 150); 
+                }}
+                className={`py-2 font-medium hover:underline ${
+                  activeSection === item
+                    ? darkMode
+                      ? 'text-teal-400'
+                      : 'text-teal-600'
+                    : darkMode
+                    ? 'text-white'
+                    : 'text-black'
+                }`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

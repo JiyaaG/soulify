@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
 
-function TherapySection({ darkMode }) {
+function TherapySection() {
+  const darkMode = useSelector(state => state.ui.darkMode);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 

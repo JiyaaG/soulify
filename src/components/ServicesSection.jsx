@@ -3,9 +3,10 @@ import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Users, Calendar } from 'lucide-react';
 import {motion} from 'framer-motion';
+import { useSelector } from 'react-redux';
 
-
-function ServicesSection({ darkMode }) {
+function ServicesSection() {
+  const darkMode = useSelector(state => state.ui.darkMode);
   const features = [
     {
       icon: <Users size={32} />,

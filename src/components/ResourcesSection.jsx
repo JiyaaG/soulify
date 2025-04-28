@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { BookOpen, Video, FileText, Download, ExternalLink } from 'lucide-react';
+import { useSelector } from 'react-redux';
 
-const ResourcesSection = ({ darkMode }) => {
+const ResourcesSection = () => {
+  const darkMode = useSelector(state => state.ui.darkMode);
   const [activeCategory, setActiveCategory] = useState('all');
   
   const resources = [

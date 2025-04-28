@@ -1,6 +1,8 @@
 import { Heart } from 'lucide-react';
+import { useSelector } from 'react-redux';
 
-function Footer({ darkMode }) {
+function Footer() {
+  const darkMode = useSelector(state => state.ui.darkMode);
   return (
     <footer className={`py-12 ${darkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
       <div className="container mx-auto px-4">

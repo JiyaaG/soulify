@@ -5,9 +5,10 @@ import {
   FileText, Star, TrendingUp, Clock, Heart, 
   Award, BookOpen, Sunrise, Moon
 } from 'lucide-react';
+import { useSelector } from 'react-redux';
 
-
-function FeaturesSection({ darkMode }) {
+function FeaturesSection() {
+  const darkMode = useSelector(state => state.ui.darkMode);
   const features = [
     {
       icon: <FileText size={28} />,
