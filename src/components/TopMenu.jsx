@@ -2,14 +2,16 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Sun, Moon, Menu, X, Heart } from 'lucide-react';
-import { toggleDarkMode } from '../redux/uiSlice';
+import { toggleDarkMode, setActiveSection } from '../redux/uiSlice';
+
 
 function TopMenuBar() {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.ui.darkMode); 
+  const activeSection = useSelector((state) => state.ui.activeSection);
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -21,12 +23,12 @@ function TopMenuBar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            dispatch(setActiveSection(entry.target.id));
           }
         });
       },
-      { threshold: 0.6 }
-    );
+      { threshold: 0.6 },
+      [dispatch],   );
 
     sections.forEach((id) => {
       const section = document.getElementById(id);
@@ -95,7 +97,7 @@ function TopMenuBar() {
                 key={item}
                 href={`#${item}`}
                 onClick={() => {
-                  setActiveSection(item); 
+                  dispatch(setActiveSection(item)); 
                   setTimeout(() => setMenuOpen(false), 150); 
                 }}
                 className={`py-2 font-medium hover:underline ${

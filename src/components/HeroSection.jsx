@@ -1,33 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import {  useRef } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useSelector } from 'react-redux';
 
 function HeroSection() {
   const darkMode = useSelector(state => state.ui.darkMode);
-  const [isVisible, setIsVisible] = useState(false);
+  const activeSection = useSelector(state => state.ui.activeSection);
+  const isVisible = activeSection === 'home';
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+ 
 
   return (
     <section
