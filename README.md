@@ -3,10 +3,12 @@
 Link to live preview: [Soulify Live](https://soulify-rouge.vercel.app)
 
 ## Tech Stack
-- React
+- React (with Hooks)
 - Tailwind CSS
-- Vite
-- Lucide-React
+- Lucide React (icons)
+- Redux Toolkit (state management)
+- Vite (build tool)
+- Vercel (hosting & deployment)
 
 ## Components Implemented
 - Top Menu Bar
@@ -18,7 +20,16 @@ Link to live preview: [Soulify Live](https://soulify-rouge.vercel.app)
 - Resources Section
 - Footer
 
+##  Features
+- 🔁 Dark/Light Mode Toggle
+- 🧠 Therapy Resources
+- 📱 Responsive Design
+- 💾 Redux for scalable state management
+- 🌐 Deployed with Vercel
+
 ## What I Would Improve with More Time
+**make it a full stack applicaton** by adding:
+
 * manifestation board(core --> an affirmation that is to be done twice daily at a certain point of time daily 
      [functionality : alarm ,pop-up])images, notes
 *daily affirmations

@@ -1,4 +1,3 @@
-// src/components/TopMenuBar.js
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Sun, Moon, Menu, X, Heart } from 'lucide-react';
