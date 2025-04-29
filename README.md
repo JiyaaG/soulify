@@ -48,4 +48,13 @@ again tracker for solution or paid opt for paid reader for chakra cleansing
     -providing light weight content  OR
     -things you should do now(a. generalized b. personalized acc to current info AI)
 *AVATAR -a bestie/brocode type avatar a special tab for this where you can spit out any dam thing.
- 
+
+## 📂 Setup Locally
+
+```bash
+git clone https://github.com/JiyaaG/soulify.git
+cd soulify
+npm install
+npm run dev
+
+Made with 💖 by Jiyaa Gidwani
